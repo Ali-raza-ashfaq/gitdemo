@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      *{
+        margin: 0px;
+        padding: 0px;
+      }
+      /* body {
+        background-color: lightcyan;
+      } */
+      .form_container {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .form_container::before {
+      content: "";
+      background: url(images/slide-01.jpg) no-repeat center center/cover;
+      min-height: 100vh;
+      width: 98.72vw;
+      z-index: -1;
+      position: absolute;
+      /* opacity: 98%; */
+    }
+      .form_container form {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 12px 1px black;
+        text-align: center;
+        /* background-color: white; */
+        color: orangered;
+        width: 350px;
+      }
+      .form_container form h3 {
+        font-size: 27px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      .form_container form input,
+      .form_container form select {
+        /* width: 100%; */
+        padding: 8px 12px;
+        font-size: 16px;
+        margin: 7px 0px;
+        /* text-align: center; */
+        border-radius: 7px;
+        border: 2px solid whitesmoke;
+        background: whitesmoke;
+      }
+      .form_container form .form_btn {
+        background: rgb(247, 184, 184);
+        color: crimson;
+        text-transform: capitalize;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      .form_container form .form_btn:hover {
+        background: crimson;
+        color: rgb(247, 184, 184);
+      }
+      .form_container form p {
+        font-size: 18px;
+      }
+      .form_container form p a {
+        text-decoration: none;
+        color: crimson;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form_container">
+      <form action="" method="post">
+        <h3>Register Now!</h3>
+        <input
+          type="text"
+          name="name"
+          placeholder="Enter your name:"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter your email:"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter your password:"
+          required
+        />
+        <input
+          type="password"
+          name="cpassword"
+          placeholder="Confirm your password:"
+          required
+        />
+        <select name="user_type">
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+        </select>
+        <input
+          type="submit"
+          name="submit"
+          value="Register Now"
+          class="form_btn"
+        />
+        <p>
+          Already have an account?
+          <a href="login_form.html" target="_blank">Login Now</a>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
